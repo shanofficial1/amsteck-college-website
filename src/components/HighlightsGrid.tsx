@@ -90,14 +90,14 @@ const HighlightsGrid = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <p className="text-lg text-muted-foreground mb-6">
             Explore all our facilities and see what makes Amsteck special
           </p>
           <button className="btn-primary text-lg px-8 py-4">
             Take Virtual Tour
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -28,14 +28,14 @@ const RecognitionGrid = () => {
         </div>
 
         {/* Recognition Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {recognitions.map((recognition, index) => (
             <div
               key={index}
               className="card-elevated card-hover-lift p-6 flex flex-col items-center justify-center text-center h-32 group"
             >
               {/* Placeholder Logo */}
-              <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16  rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-8 h-8 text-primary" />
               </div>
               
@@ -51,7 +51,7 @@ const RecognitionGrid = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <div className="bg-muted rounded-2xl p-8 md:p-12">
             <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
               Quality Assured Education
@@ -68,7 +68,7 @@ const RecognitionGrid = () => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

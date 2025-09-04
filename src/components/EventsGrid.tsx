@@ -143,20 +143,25 @@ const EventsGrid = () => {
                     <Clock className="w-4 h-4 text-primary" />
                     <span>{event.time}</span>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center justify-between  space-x-2">
+                   <div className="flex items-center  space-x-2">
                     <MapPin className="w-4 h-4 text-primary" />
-                    <span>{event.location}</span>
+                    <span>{event.location}</span> 
+                    </div>
+                    <div className="flex items-center  space-x-2 hover:text-primary cursor-pointer ">
+                     <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                     <span>Learn More</span>
+                    </div>
                   </div>
+               
                 </div>
 
                 {/* CTA */}
-                <div className="pt-4">
-                  <button className="w-full btn-outline group/btn">
+                  {/* <button className="w-full btn-outline group/btn flex items-center justify-center mt-4">
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                  </button>
+                  </button> */}
                 </div>
-              </div>
             </article>
           ))}
         </div>

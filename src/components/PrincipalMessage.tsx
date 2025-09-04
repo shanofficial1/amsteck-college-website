@@ -55,7 +55,7 @@ const PrincipalMessage = () => {
             </div>
 
             {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            {/* <div className="flex flex-col sm:flex-row gap-4">
               <button className="btn-primary group">
                 Read Full Message
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
@@ -63,7 +63,7 @@ const PrincipalMessage = () => {
               <button className="btn-outline">
                 Schedule Meeting
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

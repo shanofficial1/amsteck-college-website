@@ -1,6 +1,7 @@
 import React from 'react';
 import { Target, Eye, ArrowRight } from 'lucide-react';
 import aboutImage from '../assets/about.jpg';
+import CountUp from '../components/ui/count-up'
 
 const AboutSection = () => {
   return (
@@ -14,11 +15,9 @@ const AboutSection = () => {
                 About Amsteck College
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                At Amsteck College, we are committed to providing exceptional education that empowers students to excel in their chosen fields. Our institution combines traditional academic excellence with innovative teaching methodologies to create a dynamic learning environment.
-              </p>
+Amsteck Arts and Science College, Kalliassery, is a private institution in Kannur, Kerala, established in 2008. The college offers 8 undergraduate and postgraduate programs in full-time mode, with specialisations in English and Physics.              </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                With state-of-the-art facilities, experienced faculty, and a focus on practical learning, we prepare our students for successful careers and meaningful contributions to society.
-              </p>
+It provides courses like B.Sc., BCA, B.Com, B.A., BBA, M.Com, and M.A. across various streams, with an intake of 230 students and a well-equipped campus for academics and development. </p>
             </div>
 
             {/* Mission & Vision Cards */}
@@ -31,6 +30,7 @@ const AboutSection = () => {
                       <Target className="w-6 h-6 text-white" />
                     </div>
                   </div>
+                 
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-primary mb-3">Our Mission</h3>
                     <p className="text-muted-foreground mb-4">
@@ -86,7 +86,11 @@ const AboutSection = () => {
               {/* Floating Stats */}
               <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-6 shadow-xl border border-border">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">15+</div>
+                  <div className="text-2xl font-bold text-primary">
+                  
+                    <CountUp from={0} to={new Date().getFullYear() - 2008} separator="," direction="up"  duration={2} className="count-up-text"/>+
+                     
+                    </div>
                   <div className="text-sm text-muted-foreground">Years of Excellence</div>
                 </div>
               </div>

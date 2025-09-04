@@ -79,7 +79,7 @@ const HeroCarousel = () => {
       ))}
 
       {/* Content Overlay */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      {/* <div className="absolute inset-0 flex items-center justify-center">
         <div className="section-container text-center text-white">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
             Welcome to{' '}
@@ -99,10 +99,10 @@ const HeroCarousel = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -113,7 +113,7 @@ const HeroCarousel = () => {
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
-      </div>
+      </div> */}
 
       {/* Screen Reader Only Controls */}
       <div className="sr-only">

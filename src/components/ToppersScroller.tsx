@@ -49,10 +49,11 @@ const ToppersScroller = () => {
               >
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-4 transition-all duration-300 hover:bg-white/20 hover:border-white/30 group">
                   {/* Student Image */}
-                  <div className="w-full h-40 bg-white/20 rounded-md mb-4 flex items-center justify-center overflow-hidden">
+                  <div className="w-full h-50 bg-white/20 rounded-md mb-4 flex items-center justify-center overflow-hidden">
                     <div className="w-full h-full bg-gradient-to-br from-white/30 to-white/10 flex items-center justify-center">
-                      <GraduationCap className="w-12 h-12 text-white/80" />
-                    </div>
+                      {/* <GraduationCap className="w-24 h-24 text-white/80" /> */}
+
+<img src="https://i.postimg.cc/tRSwzL76/AMSTECK.png" alt="" />                    </div>
                   </div>
 
                   {/* Student Info */}
@@ -80,9 +81,9 @@ const ToppersScroller = () => {
           <p className="text-white/90 text-lg mb-6">
             Join our community of high achievers and unlock your potential
           </p>
-          <button className="bg-white text-primary px-8 py-4 rounded-lg font-medium text-lg hover:bg-white/90 transition-colors duration-300">
+          {/* <button className="bg-white text-primary px-8 py-4 rounded-lg font-medium text-lg hover:bg-white/90 transition-colors duration-300">
             View All Achievers
-          </button>
+          </button> */}
         </div>
       </div>
 

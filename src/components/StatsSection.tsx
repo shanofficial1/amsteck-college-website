@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trophy, Users, Building2, GraduationCap } from 'lucide-react';
-
+import CountUp from '../components/ui/count-up'
 const StatsSection = () => {
   const stats = [
     {
@@ -37,14 +37,14 @@ const StatsSection = () => {
     <section className="section-spacing bg-background">
       <div className="section-container">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
             Our Achievements
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Numbers that reflect our commitment to academic excellence and student success
           </p>
-        </div>
+        </div> */}
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -60,7 +60,7 @@ const StatsSection = () => {
 
               {/* Number */}
               <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
-                {stat.number}
+                <CountUp from={0} to={stat.number} separator="," direction="up"  duration={2} className="count-up-text"/>+
               </div>
 
               {/* Label */}
@@ -80,14 +80,14 @@ const StatsSection = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <p className="text-lg text-muted-foreground mb-6">
             Join thousands of successful graduates who started their journey at Amsteck
           </p>
           <button className="btn-primary text-lg px-8 py-4">
             Start Your Journey
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
