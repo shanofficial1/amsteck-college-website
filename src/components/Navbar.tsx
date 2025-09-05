@@ -16,7 +16,6 @@ const Navbar = () => {
     { name: 'Home', href: '/' },
     { 
       name: 'About', 
-      href: '/about',
       dropdown: [
         { name: 'Profile', href: '/about/profile' },
         { name: 'Vision & Mission', href: '/about/vision-mission' },
@@ -28,18 +27,15 @@ const Navbar = () => {
     },
     { 
       name: 'Academics', 
-      href: '#academics',
       dropdown: [
-        { name: 'Programs', href: '#programs' },
-        { name: 'Courses', href: '#courses' },
-        { name: 'Curriculum', href: '#curriculum' },
-        { name: 'Academic Calendar', href: '#calendar' },
+        { name: 'Faculty', href: '/academics/faculty' },
+        { name: 'Programmes Offered', href: '/academics/programmes-offered' },
+        { name: 'Syllabus', href: '/academics/syllabus' },
         { name: 'Question Bank', href: '/academics/question-bank' },
       ]
     },
     { 
       name: 'Departments', 
-      href: '#departments',
       dropdown: [
         { name: 'Computer Science', href: '/departments/cs' },
         { name: 'Business Administration', href: '/departments/bba' },
@@ -49,23 +45,16 @@ const Navbar = () => {
     },
     { 
       name: 'Student Support', 
-      href: 'student-support',
       dropdown: [
-        { name: 'Academic Support', href: '#academic-support' },
-        { name: 'Career Services', href: '#career' },
-        { name: 'Counseling', href: '#counseling' },
         { name: 'College Union', href: '/student-support/college-union' },
         { name: 'NSS', href: '/student-support/nss' },
       ]
     },
     { 
       name: 'Facilities', 
-      href: '#facilities',
       dropdown: [
-        { name: 'Library', href: '#library' },
-        { name: 'Computer Labs', href: '#labs' },
-        { name: 'Sports Complex', href: '#sports' },
-        { name: 'Hostel', href: '#hostel' },
+        { name: 'Library', href: '/facilities/library' },
+        { name: 'Computer Labs', href: '/facilities/computer-lab' },
       ]
     },
     

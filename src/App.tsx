@@ -15,6 +15,9 @@ import VisionMission from "./pages/about/VisionMission";
 import DepartmentProfile from "./pages/departments/DepartmentProfile";
 import CollegeUnion from "./pages/student-support/CollegeUnion";
 import NationalServiceScheme from "./pages/student-support/NationalServiceScheme";
+import Faculty from "./pages/academics/Faculty";
+import ProgrammesOffered from "./pages/academics/ProgrammesOffered";
+import Syllabus from "./pages/academics/Syllabus";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +39,9 @@ const App = () => (
               <Route path="/departments/:department" element={<DepartmentProfile />} />
               <Route path="/student-support/college-union" element={<CollegeUnion />} />
               <Route path="/student-support/nss" element={<NationalServiceScheme />} />
+             <Route path="/academics/faculty" element={<Faculty />} />
+             <Route path="/academics/programmes-offered" element={<ProgrammesOffered />} />
+             <Route path="/academics/syllabus" element={<Syllabus />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

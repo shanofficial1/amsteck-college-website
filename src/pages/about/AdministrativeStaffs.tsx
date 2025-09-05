@@ -150,7 +150,8 @@ const AdministrativeStaffs = () => {
                     <div className="w-full h-full bg-gradient-to-br from-white/30 to-white/10 flex items-center justify-center">
                       {/* <GraduationCap className="w-24 h-24 text-white/80" /> */}
 
-<imga src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?cs=srgb&dl=pexels-creationhill-1681010.jpg&fm=jpg" alt="" />                    </div>
+<img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?cs=srgb&dl=pexels-creationhill-1681010.jpg&fm=jpg" alt="" />               
+     </div>
                   </div>
 
 
