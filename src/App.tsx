@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import QuestionBank from "./pages/QuestionBank";
+import QuestionBank from "./pages/academics/QuestionBank";
 import AdministrativeStaffs from "./pages/about/AdministrativeStaffs";
 import ManagementPage from "./pages/about/Management";
 import ManagerPage from "./pages/about/Manager";
@@ -18,6 +18,8 @@ import NationalServiceScheme from "./pages/student-support/NationalServiceScheme
 import Faculty from "./pages/academics/Faculty";
 import ProgrammesOffered from "./pages/academics/ProgrammesOffered";
 import Syllabus from "./pages/academics/Syllabus";
+import ComputerLab from "./pages/facilities/ComputerLab";
+import Library from "./pages/facilities/Library";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +44,8 @@ const App = () => (
              <Route path="/academics/faculty" element={<Faculty />} />
              <Route path="/academics/programmes-offered" element={<ProgrammesOffered />} />
              <Route path="/academics/syllabus" element={<Syllabus />} />
+             <Route path="/facilities/computer-lab" element={<ComputerLab />} />
+             <Route path="/facilities/library" element={<Library />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

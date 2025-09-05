@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+    base: "https://amsteck-college-website.vercel.app/",
   plugins: [
     react(),
     mode === 'development' &&

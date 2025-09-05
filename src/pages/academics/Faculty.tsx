@@ -3,7 +3,22 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+
+const toTitleCase = (slug) =>
+  slug
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+
+
+
 const Faculty = () => {
+
+       const path = window.location.pathname;
+  const currentSlug = path.split("/").pop(); // "programmes-offered"
+  const currentPage = toTitleCase(currentSlug); // "Programmes Offered"
+
+  const menuItems = ["Faculty", "Programmes Offered", "Syllabus", "Question Bank"];
+
   const facultyData = [
     {
       category: "POST GRADUATE DEPARTMENT OF COMMERCE",
@@ -98,43 +113,43 @@ const Faculty = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      <main className="container mx-auto px-4 pt-24 pb-8">
-        {/* Breadcrumb */}
-        <nav className="text-sm mb-6">
-          <span className="text-muted-foreground">Home</span>
-          <span className="mx-2 text-muted-foreground">›</span>
-          <span className="text-muted-foreground">Academics</span>
-          <span className="mx-2 text-muted-foreground">›</span>
-          <span className="text-primary font-medium">Faculty</span>
-        </nav>
-
-        {/* Header with college building image */}
-        <div className="relative mb-8">
-          <div className="h-64 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg overflow-hidden">
-            <div className="flex items-center justify-center h-full">
-              <div className="text-center">
-                <h1 className="text-4xl font-bold text-primary mb-2">Faculty</h1>
-                <div className="w-16 h-1 bg-primary mx-auto rounded"></div>
-              </div>
-            </div>
-          </div>
+      <main className="container mx-auto px-4 pt-20 pb-8">
+       <div className="relative bg-primary text-primary-foreground text-white py-20">
+        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="relative container mx-auto px-4 text-center">
+          <nav className="text-sm mb-4 opacity-90">
+            <span>Home</span> <span className="mx-2">›</span>
+            <span>Academics</span> <span className="mx-2">›</span>
+            <span>{currentPage}</span>
+          </nav>
+          <h1 className="text-4xl md:text-5xl font-bold">{currentPage}</h1>
         </div>
+      </div>
 
-        {/* Faculty Navigation Pills */}
-        <div className="flex flex-wrap gap-2 mb-8">
-          {['Faculty', 'Admission', 'Programs Offered', 'Syllabus', 'Academic Calls'].map((item, index) => (
-            <div
+      {/* Academics Subnav */}
+      <div className="flex flex-wrap gap-2 mb-8 mt-8">
+        {menuItems.map((item) => {
+          const slug = item.replace(/\s+/g, "-").toLowerCase();
+          const link = `/academics/${slug}`;
+          const isActive = path === link;
+
+          return (
+            <a
               key={item}
+              href={link}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer ${
-                index === 0 
-                  ? 'bg-primary text-primary-foreground' 
-                  : 'bg-muted text-muted-foreground hover:bg-muted/80'
+                isActive
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-muted text-muted-foreground hover:bg-muted/80"
               }`}
             >
               {item}
-            </div>
-          ))}
-        </div>
+            </a>
+          );
+        })}
+      </div>
+
+
 
         {/* Faculty Tables */}
         <div className="space-y-8">

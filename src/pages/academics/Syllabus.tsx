@@ -4,7 +4,24 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
+
+
+const toTitleCase = (slug) =>
+  slug
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+
+
 const Syllabus = () => {
+
+
+     const path = window.location.pathname;
+  const currentSlug = path.split("/").pop(); // "programmes-offered"
+  const currentPage = toTitleCase(currentSlug); // "Programmes Offered"
+
+  const menuItems = ["Faculty", "Programmes Offered", "Syllabus", "Question Bank"];
+
+
   useEffect(() => {
     document.title = 'Syllabus - AMSTECK College';
   }, []);
@@ -35,18 +52,45 @@ const Syllabus = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      {/* Hero Section */}
-      <div className="relative bg-primary text-primary-foreground text-white py-20">
+
+       <main className="container mx-auto px-4 pt-20 pb-8">
+         <div className="relative bg-primary text-primary-foreground text-white py-20">
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative container mx-auto px-4 text-center">
           <nav className="text-sm mb-4 opacity-90">
             <span>Home</span> <span className="mx-2">›</span>
             <span>Academics</span> <span className="mx-2">›</span>
-            <span>Curriculam</span>
+            <span>{currentPage}</span>
           </nav>
-          <h1 className="text-4xl md:text-5xl font-bold">Curriculam</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">{currentPage}</h1>
         </div>
       </div>
+
+      {/* Academics Subnav */}
+      <div className="flex flex-wrap gap-2 mb-8 mt-8">
+        {menuItems.map((item) => {
+          const slug = item.replace(/\s+/g, "-").toLowerCase();
+          const link = `/academics/${slug}`;
+          const isActive = path === link;
+
+          return (
+            <a
+              key={item}
+              href={link}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer ${
+                isActive
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-muted text-muted-foreground hover:bg-muted/80"
+              }`}
+            >
+              {item}
+            </a>
+          );
+        })}
+      </div>
+
+
+
 
       {/* Content Section */}
       <div className="container mx-auto px-4 py-12 space-y-8">
@@ -116,7 +160,7 @@ const Syllabus = () => {
           </CardContent>
         </Card>
       </div>
-
+</main>
       <Footer />
     </div>
   );

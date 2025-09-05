@@ -236,7 +236,7 @@ const Navbar = () => {
             {navItems.map((item) => (
               item.dropdown ? (
                 <div key={item.name} className="relative group">
-                  <button className="flex items-center text-foreground hover:text-primary transition-colors duration-300 font-medium py-2 focus:outline-none">
+                  <button className="flex   items-center text-foreground hover:text-primary transition-colors duration-300 font-medium py-2 focus:outline-none">
                     {item.name}
                     <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
                   </button>
