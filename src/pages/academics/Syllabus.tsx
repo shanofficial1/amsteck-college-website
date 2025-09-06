@@ -53,8 +53,7 @@ const Syllabus = () => {
       <Navbar />
       
 
-       <main className="container mx-auto px-4 pt-20 pb-8">
-         <div className="relative bg-primary text-primary-foreground text-white py-20">
+     <div className="relative bg-primary text-primary-foreground mt-20 text-white  py-20">
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative container mx-auto px-4 text-center">
           <nav className="text-sm mb-4 opacity-90">
@@ -66,8 +65,11 @@ const Syllabus = () => {
         </div>
       </div>
 
+      <main className="container mx-auto px-4  pb-8">     
+    
+
       {/* Academics Subnav */}
-      <div className="flex flex-wrap gap-2 mb-8 mt-8">
+      <div className="flex flex-wrap gap-2 px-5 mb-8 mt-8">
         {menuItems.map((item) => {
           const slug = item.replace(/\s+/g, "-").toLowerCase();
           const link = `/academics/${slug}`;

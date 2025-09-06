@@ -4,6 +4,16 @@ import Footer from '../../components/Footer';
 import { Card, CardContent } from '../../components/ui/card';
 import { Users, User, Mail, Phone } from 'lucide-react';
 
+
+
+
+const toTitleCase = (slug) =>
+  slug
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+
+
+
 const AdministrativeStaffs = () => {
   const administrativeStaffs = [
     {
@@ -68,10 +78,21 @@ const AdministrativeStaffs = () => {
     }
   ];
 
+
+    const path = window.location.pathname;
+  const currentSlug = path.split("/").pop(); // "programmes-offered"
+  const currentPage = toTitleCase(currentSlug); // "Programmes Offered"
+
+  const menuItems = ["Profile", "Vision & Mission", "Principal Message","Manager","Management", "Administrative Staffs"];
+
   return (
     <>
       <Navbar />
       <main className="pt-20 min-h-screen bg-muted">
+
+
+
+
         {/* Header */}
         <section className=" text-white py-12 bg-[url('http://localhost:8080/src/assets/carousel3.jpg')] bg-cover bg-center">
           <div className="section-container">
@@ -85,6 +106,34 @@ const AdministrativeStaffs = () => {
             </div>
           </div>
         </section>
+
+
+<div className="container flex items-center  ">
+   <div className="flex  flex-wrap gap-2  mx-auto mb-8 mt-8">
+        {menuItems.map((item) => {
+          const slug = item.replace(/\s+/g, "-").toLowerCase();
+          const link = `/about/${slug}`;
+          const isActive = path === link;
+
+          return (
+            <a
+              key={item}
+              href={link}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer ${
+                isActive
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-muted text-muted-foreground hover:bg-muted/80"
+              }`}
+            >
+              {item}
+            </a>
+          );
+        })}
+      </div>
+</div>
+
+
+
 
         {/* Administrative Staffs Content */}
         <section className="section-spacing">
