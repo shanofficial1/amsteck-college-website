@@ -84,7 +84,7 @@ const HeroCarousel = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
             Welcome to{' '}
             <span className="text-gradient-primary bg-clip-text text-transparent bg-gradient-to-r from-accent to-secondary">
-              AMSTECK
+              Amsteck
             </span>
           </h1>
           <p className="text-xl md:text-2xl lg:text-3xl mb-8 opacity-90 animate-slide-up">

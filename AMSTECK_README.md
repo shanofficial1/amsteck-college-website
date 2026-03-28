@@ -65,7 +65,7 @@ src/assets/
 ```
 public/assets/
 ├── logo.svg           # College logo
-├── AMSTECK.png        # College emblem
+├── Amsteck.png        # College emblem
 └── toppers/           # Student photos
     ├── aiswarya.jpg
     ├── raj.jpg

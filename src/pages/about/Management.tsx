@@ -3,6 +3,10 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { Card, CardContent } from '../../components/ui/card';
 import { Users, Building2, Shield } from 'lucide-react';
+const toTitleCase = (slug) =>
+  slug
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
 
 const ManagementPage = () => {
   const governingBody = [
@@ -21,6 +25,14 @@ const ManagementPage = () => {
     "ORGANOGRAM",
     "ORGANOGRAM"
   ];
+
+
+
+      const path = window.location.pathname;
+  const currentSlug = path.split("/").pop(); // "programmes-offered"
+  const currentPage = toTitleCase(currentSlug); // "Programmes Offered"
+
+  const menuItems = ["Profile", "Vision  Mission", "Principal Message","Manager","Management", "Administrative Staffs"];
 
   return (
     <>

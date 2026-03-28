@@ -83,7 +83,7 @@ const AdministrativeStaffs = () => {
   const currentSlug = path.split("/").pop(); // "programmes-offered"
   const currentPage = toTitleCase(currentSlug); // "Programmes Offered"
 
-  const menuItems = ["Profile", "Vision & Mission", "Principal Message","Manager","Management", "Administrative Staffs"];
+  const menuItems = ["Profile", "Vision  Mission", "Principal Message","Manager","Management", "Administrative Staffs"];
 
   return (
     <>

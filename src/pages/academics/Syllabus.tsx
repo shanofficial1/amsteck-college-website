@@ -23,7 +23,7 @@ const Syllabus = () => {
 
 
   useEffect(() => {
-    document.title = 'Syllabus - AMSTECK College';
+    document.title = 'Syllabus - Amsteck College';
   }, []);
 
   const undergraduateCourses = [

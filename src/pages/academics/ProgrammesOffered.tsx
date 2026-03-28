@@ -13,7 +13,7 @@ const toTitleCase = (slug) =>
 
 const ProgrammesOffered = () => {
   useEffect(() => {
-    document.title = 'Programmes Offered - AMSTECK College';
+    document.title = 'Programmes Offered - Amsteck College';
   }, []);
 
 

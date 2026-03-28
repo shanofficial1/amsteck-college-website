@@ -53,7 +53,7 @@ const ToppersScroller = () => {
                     <div className="w-full h-full bg-gradient-to-br from-white/30 to-white/10 flex items-center justify-center">
                       {/* <GraduationCap className="w-24 h-24 text-white/80" /> */}
 
-<img src="https://i.postimg.cc/tRSwzL76/AMSTECK.png" alt="" />                    </div>
+<img src="https://i.postimg.cc/tRSwzL76/Amsteck.png" alt="" />                    </div>
                   </div>
 
                   {/* Student Info */}

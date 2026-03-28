@@ -6,7 +6,7 @@ import { BookOpen, Clock, Users, Wifi } from 'lucide-react';
 
 const Library = () => {
   useEffect(() => {
-    document.title = 'Library - AMSTECK College';
+    document.title = 'Library - Amsteck College';
   }, []);
 
   const libraryFeatures = [
@@ -59,7 +59,7 @@ const Library = () => {
             <h2 className="text-3xl font-bold mb-6">About Our Library</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                The AMSTECK College Central Library serves as the academic heart of our institution, 
+                The Amsteck College Central Library serves as the academic heart of our institution, 
                 providing students and faculty with access to a vast collection of books, journals, 
                 and digital resources.
               </p>
@@ -141,7 +141,7 @@ const Library = () => {
               <h3 className="font-semibold mb-2">Contact</h3>
               <p className="text-muted-foreground">Librarian: Dr. Library Staff</p>
               <p className="text-muted-foreground">Phone: +91 XXX XXX XXXX</p>
-              <p className="text-muted-foreground">Email: library@amsteck.edu</p>
+              <p className="text-muted-foreground">Email: library@Amsteck.edu</p>
             </div>
           </CardContent>
         </Card>

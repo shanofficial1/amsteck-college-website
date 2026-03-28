@@ -94,7 +94,7 @@ const Navbar = () => {
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-lg lg:text-xl text-primary">
-                AMSTECK
+                Amsteck
               </span>
               <span className="text-xs text-muted-foreground hidden sm:block">
                 College

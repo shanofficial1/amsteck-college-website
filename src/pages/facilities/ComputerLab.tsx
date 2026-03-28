@@ -6,7 +6,7 @@ import { Monitor, Wifi, HardDrive, Cpu, Users, Clock } from 'lucide-react';
 
 const ComputerLab = () => {
   useEffect(() => {
-    document.title = 'Computer Lab - AMSTECK College';
+    document.title = 'Computer Lab - Amsteck College';
   }, []);
 
   const labFeatures = [
@@ -74,7 +74,7 @@ const ComputerLab = () => {
             <h2 className="text-3xl font-bold mb-6">About Our Computer Lab</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                The AMSTECK College Computer Laboratory is equipped with modern computing infrastructure 
+                The Amsteck College Computer Laboratory is equipped with modern computing infrastructure 
                 to support digital learning across all academic programs. Our lab provides students 
                 with hands-on experience in various software applications and programming languages.
               </p>
@@ -192,7 +192,7 @@ const ComputerLab = () => {
               <h3 className="font-semibold mb-2">Contact Information</h3>
               <p className="text-muted-foreground">Lab Coordinator: Mr. Tech Assistant</p>
               <p className="text-muted-foreground">Phone: +91 XXX XXX XXXX</p>
-              <p className="text-muted-foreground">Email: computerlab@amsteck.edu</p>
+              <p className="text-muted-foreground">Email: computerlab@Amsteck.edu</p>
             </div>
           </CardContent>
         </Card>

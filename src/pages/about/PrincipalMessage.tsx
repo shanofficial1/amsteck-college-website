@@ -4,6 +4,10 @@ import Footer from '../../components/Footer';
 import { Card, CardContent } from '../../components/ui/card';
 import { Quote, ArrowRight, Calendar, Award, Users } from 'lucide-react';
 import principalImage from '../../assets/principal.jpg';
+const toTitleCase = (slug) =>
+  slug
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
 
 const PrincipalMessagePage = () => {
   const principals = [
@@ -20,7 +24,11 @@ const PrincipalMessagePage = () => {
     { name: "Prof. K.V.Balan (Addl charge)", year: "(1987-1988)" },
     { name: "Prof. P.M.Lakshmanan", year: "(1983-1987)" }
   ];
+    const path = window.location.pathname;
+  const currentSlug = path.split("/").pop(); // "programmes-offered"
+  const currentPage = toTitleCase(currentSlug); // "Programmes Offered"
 
+  const menuItems = ["Profile", "Vision  Mission", "Principal Message","Manager","Management", "Administrative Staffs"];
   return (
     <>
       <Navbar />
